@@ -1,0 +1,10 @@
+# -----------------------------
+# Job Application Assistant
+# Python dependencies
+# -----------------------------
+
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-multipart
