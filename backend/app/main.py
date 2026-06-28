@@ -21,6 +21,10 @@ from fastapi import FastAPI
 from app.database.database import engine
 from app.database.database import Base
 
+from app.routers import applications
+app = FastAPI(...)
+app.include_router(applications.router)
+
 import app.database.models
 # ---------------------------------------------------------
 # Create Database Tables
