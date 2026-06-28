@@ -18,6 +18,18 @@ This file should stay as small as possible.
 # FastAPI allows us to build REST APIs quickly.
 from fastapi import FastAPI
 
+from app.database.database import engine
+from app.database.database import Base
+
+import app.database.models
+# ---------------------------------------------------------
+# Create Database Tables
+# ---------------------------------------------------------
+#
+# If the tables do not exist,
+# SQLAlchemy creates them automatically.
+#
+Base.metadata.create_all(bind=engine)
 
 # Create the FastAPI application.
 # Every API endpoint belongs to this object.
