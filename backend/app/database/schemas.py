@@ -49,3 +49,17 @@ class ApplicationResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class ApplicationUpdate(BaseModel):
+    """
+    Data allowed when updating an application.
+    All fields are optional because we may update only one field.
+    """
+
+    company: Optional[str] = None
+    position: Optional[str] = None
+    status: Optional[str] = None
+    location: Optional[str] = None
+    salary: Optional[str] = None
+    notes: Optional[str] = None
